@@ -4,13 +4,13 @@
  * @return {string}
  */
 var mergeAlternately = function (word1, word2) {
-    const res = []
+    let res = ''
     const most = Math.max(word1.length, word2.length)
 
     for (let i = 0; i <= most; i++) {
-        word1[i] && res.push(word1[i])
-        word2[i] && res.push(word2[i])
+        res += word1[i] ?? ''
+        res += word2[i] ?? ''
     }
 
-    return res.join('')
+    return res
 };
